@@ -1,0 +1,42 @@
+{
+  "name": "@bluelovers/fast-glob",
+  "version": "3.0.4",
+  "description": "old typescript api for fast-glob",
+  "keywords": [
+    "bluebird",
+    "fast",
+    "fast-glob",
+    "glob",
+    "implementation",
+    "patterns",
+    "promise"
+  ],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "types": "types.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "coverage": "npx nyc npm run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "postpublish_": "git commit -m \"publish new version\" .",
+    "prepublishOnly": "npm run sort-package-json",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^3",
+    "fast-glob": "^3"
+  },
+  "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.12",
+    "@types/bluebird": "*",
+    "@types/node": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
