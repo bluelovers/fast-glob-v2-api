@@ -11,6 +11,14 @@
     "patterns",
     "promise"
   ],
+  "homepage": "https://github.com/bluelovers/fast-glob-v2-api#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/fast-glob-v2-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/fast-glob-v2-api.git"
+  },
   "license": "ISC",
   "author": "",
   "main": "index.js",
@@ -22,10 +30,13 @@
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
     "ncu": "npx yarn-tool ncu -u",
-    "postpublish_": "git commit -m \"publish new version\" .",
+    "npm:publish": "npm publish",
     "prepublishOnly": "npm run sort-package-json",
+    "postpublish": "git commit -m \"publish new version\" .",
     "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
     "bluebird": "^3",
