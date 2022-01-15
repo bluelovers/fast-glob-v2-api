@@ -14,15 +14,15 @@ import Entry = _FastGlob_.Entry;
 import EntryItem = _types.EntryItem;
 declare function FastGlob(source: Pattern | Pattern[], options: OptionsWithEntryObjectPredicate): Bluebird<Entry[]>;
 declare namespace FastGlob {
-    var default: typeof FastGlob;
+    var defaulta: typeof FastGlob;
 }
 declare function FastGlob(source: Pattern | Pattern[], options?: Options): Bluebird<string[]>;
 declare namespace FastGlob {
-    var default: typeof FastGlob;
+    var defaultb: typeof FastGlob;
 }
 declare function FastGlob<T extends EntryItem = string>(source: Pattern | Pattern[], options?: Options): Bluebird<T[]>;
 declare namespace FastGlob {
-    var default: typeof FastGlob;
+    var defaultc: typeof FastGlob;
 }
 declare namespace FastGlob {
     export import Options = _FastGlob_.Options;
